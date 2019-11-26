@@ -5,13 +5,20 @@ import Photo from './Photo';
 
 const Single = React.createClass({
     render() {
+        const { posts, params } = this.props
         // index of the post
-        const i = this.props.posts.findIndex((post) => post.code === this.props.params.postId)
+        const i = posts.findIndex((post) => post.code === params.postId)
         console.log(i);
         // get us the post
+        const post = posts[i];
+        console.log(post);
         return (
             <div className="single-photo">
-                I'm the Single Grid
+                <Photo
+                    {...this.props}
+                    key={i}
+                    i={i}
+                    post={post} />
             </div>
         )
     }
