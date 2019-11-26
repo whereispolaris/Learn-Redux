@@ -7,13 +7,14 @@ const Comments = React.createClass({
                 <p>
                     <strong>{comment.user}</strong>
                     {comment.text}
+                    <button className="remove-comment">&times;</button>
                 </p>
             </div>
         )
     },
     render() {
         return (
-            <div className="comment">
+            <div className="comments">
                 {this.props.postComments.map(this.renderComment)}
             </div>
         )
