@@ -18,7 +18,7 @@ const Single = React.createClass({
                     key={i}
                     i={i}
                     post={post} />
-                <Comments postComments={postComments} />
+                <Comments postComments={postComments} {...this.props} />
             </div>
         )
     }
