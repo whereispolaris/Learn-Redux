@@ -18,8 +18,6 @@ import store, { history } from './store';
 // Sentry Initialization
 Sentry.init({ dsn: "https://09ba34ce3ed240e89945460624764ee9@sentry.io/1839317" });
 
-console.log(window.wtttttttt.sfdfs);
-
 const router = (
     <Provider store={store}>
         <Router history={history}>
