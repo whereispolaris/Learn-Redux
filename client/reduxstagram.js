@@ -1,5 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
+import * as Sentry from '@sentry/browser';
 
 // Import CSS
 import css from './styles/style.styl';
@@ -13,6 +14,11 @@ import PhotoGrid from './components/PhotoGrid';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import { Provider } from 'react-redux';
 import store, { history } from './store';
+
+// Sentry Initialization
+Sentry.init({ dsn: "https://09ba34ce3ed240e89945460624764ee9@sentry.io/1839317" });
+
+console.log(window.wtttttttt.sfdfs);
 
 const router = (
     <Provider store={store}>
